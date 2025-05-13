@@ -1,0 +1,20 @@
+def soma_digitos(conteudo):
+#aqui está sendo criado a função soma_digitos, que irá receber o parâmetro "conteudo" que no final será posto a variável quaisquer_caractere nesse parâmetro
+    soma = 0 
+    #aqui a variável soma esta sendo inicialiada com 0, para receber abaixo valores
+    for caractere in conteudo:
+    #nessa parte a estrutura montada está falando o seguinte: "Para cada caractere no conteudo(futuramente sendo substituído pela variável que o usuário digitar) faça:, então é presente uma estrutura de repetição que irá fazer o processo para todo caractere digitado"    
+        if caractere.isdigit():
+        # aqui aplicamos o método is.digit(), que irá verificar se cada caractere responder como um número, e caso ele responda como tal, seguira para proxima linha    
+            soma += int(caractere)
+    return soma
+    #Retorna a variável soma 
+    
+quaisquer_caractere = input("Digite quaisquer caracteres: ")
+#input armazenando o valor digitado pelo usuário para a variável "quaisquer_caractere".
+resultado = soma_digitos(quaisquer_caractere)
+#resultado vai ser a função soma_digitos recebendo o parâmetro da variável "quaisquer_caractere", que o usuário digitou
+print(f"A soma dos caracteres inteiros é igual a {resultado}")
+ 
+
+    
