@@ -1,0 +1,20 @@
+def contar_maiusculas_minusculas(texto):
+#Criação da função e definicição do parâmetro texto
+    soma_maiuscula = 0 
+    soma_minuscula = 0 
+    #Criação de duas variáveis valendo 0, para contar maiúscula\minuscula
+    for caractere in texto:
+    #"Para cada caractere no texto, execute a verificação abaixo" 
+        if caractere.isupper():
+            soma_maiuscula += 1 
+        #se o caractere for maiúsculo (método is.upper faz isso) façã soma_maiusculo é igual a soma_maiusculo mais 1
+        elif caractere.islower():
+            soma_minuscula += 1
+        #senão se o caractere for minúsculo (método is.lower faz isso) façã soma_minúsculo é igual a soma_minusculo mais 1    
+    print(f"O total de letras maiusculas digitados é {soma_maiuscula}\né o total de letras minúsculas é {soma_minuscula}")
+    #Mostre na tela a mensagem com os valores respectivos da contagem
+    
+entrada = input("Digite qualquer texto com letras minúsculas e maiúsculas: ")
+#armazene em uma variável "entrada" a string que o usuário digitar
+contar_maiusculas_minusculas(entrada)
+#de á função contar_maiusculas_minusculas p parâmetro entrada, que o usuário digitou.
