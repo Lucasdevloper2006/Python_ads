@@ -1,0 +1,26 @@
+import random
+#aqui está sendo importado a biblioteca random, que mostra números aleatórios 
+
+print("\033[34mCassino do lucas ✓\033[0m")
+aposta = float(input("Informe o valor da aposta do Sr. R$:"))
+#aqui está perguntando ao usuário qual o valor da aposta dele em reais, por isso o float, e após isso é armazenado na variável "aposta"
+
+numero_aleatorio = random.randint(0,10)
+#Aqui está a chamada da função randint() da biblioteca random, que retorna um número aleatório entre 0 e 10, e armazena esse valor na variável numero_aleatorio
+numero_digitado = int(input("Digite um número de 0 a 10: "))
+#input inteiro pedindo ao usuário para digitar um número de 0 a 10, e armazenando na variável "numero_digitado"
+if numero_aleatorio == numero_digitado:
+    print("\n\033[32mParabéns, você acertou em cheio!!\033[0m")
+    aposta *= 2
+#se o número aleatório for igual ao número digitado pelo usuário, entao ira aparecer a mensagem que ele acertou em cheio, e o valor da aposta é dobrado
+elif numero_digitado == (numero_aleatorio - 1) or numero_digitado == (numero_aleatorio + 1):
+    aposta += aposta *0.5
+    print("\n\033[32mParabéns, você passou perto!!\033[0m")
+#senao se o número digitado for igual ao numero aleatorio - 1 ou +1 (isso faz com que se a pessoa chutar um numero antes ou depois do que foi sorteado aconteça o resto), caso a exigência for atendida a aposta agora se torna o valor dela mesmo + 50%.
+else:
+    print("\033[31m\nVocê perdeu\033[0m")
+    aposta = 0
+#caso o número nao seja nenhum das condições acima então o usuário perde tudo.
+
+print(f"O número sorteado era o {numero_aleatorio}")
+print(f"sua quantia atual é de R$:{aposta}")
